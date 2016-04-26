@@ -24,6 +24,7 @@ Copyright (c) 2016 Antonio Negro
 
 Edita `holomaster.py` para seleccionar la fuente de cada plano:
 
+~~~.py
     # Crear instancias para capturar frames de distintas fuentes
     localImg = LocalImage(HTTP_ROOT + sep + "man.jpg")
     remoteCam = HTTPImage("http://localhost:8001/output.jpg")
@@ -34,15 +35,17 @@ Edita `holomaster.py` para seleccionar la fuente de cada plano:
     #left  = remoteCam
     #bottom = localCam
     #right  = localCam
-    
+~~~
 
 Edita `holomaster.py` para ajustar la composición de los planos de proyección:
 
+~~~.py
     # Configurar los planos a usar para construir la proyeccion
     projection = Projector([front])
     #projection = Projector([front, left])
     #projection = Projector([front, left, right])
     #projection = Projector([front, left, right, bottom])
+~~~
 
 ## Puesta en marcha
 
