@@ -1,4 +1,4 @@
-# holocam
+# holograma
 Servidor en Python para un sistema de proyección holográfica en tiempo real para la Feria de la Ciencia Escolar de Écija - ASTIGICIENCIA 2016 (<http://www.astigiciencia.com/>).
 
 Copyright (c) 2016 Antonio Negro
