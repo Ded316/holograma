@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title>Hologram Control</title>
+
+	<script type="text/javascript">
+		function peticionAJAX(accion) {
+		  // Obtener la instancia del objeto XMLHttpRequest
+		  if(window.XMLHttpRequest) {
+			peticion_http = new XMLHttpRequest();
+		  }
+		  else if(window.ActiveXObject) {
+			peticion_http = new ActiveXObject("Microsoft.XMLHTTP");
+		  }
+		 
+		  // Realizar peticion HTTP
+		  peticion_http.open('GET', accion, false);
+		  peticion_http.send(null);
+		}
+	</script>
+</head>
+
+<body style="background-color: white">
+	<h1>Hologram Control</h1>
+	<br/>
+	
+	Escala:
+	<input type="button" onclick="peticionAJAX('/scale/down')" value="-" />
+	<input type="button" onclick="peticionAJAX('/scale/up')" value="+" />
+	<br/>
+	
+	Perspectiva:
+	<input type="button" onclick="peticionAJAX('/persp/down')" value="-" />
+	<input type="button" onclick="peticionAJAX('/persp/up')" value="+" />
+	<br/>
+
+	Sombras:
+	<input type="button" onclick="peticionAJAX('/black/down')" value="-" />
+	<input type="button" onclick="peticionAJAX('/black/up')" value="+" />
+	<br/>
+
+	Gamma:
+	<input type="button" onclick="peticionAJAX('/gamma/down')" value="-" />
+	<input type="button" onclick="peticionAJAX('/gamma/up')" value="+" />
+	<br/>
+
+	Luces:
+	<input type="button" onclick="peticionAJAX('/white/down')" value="-" />
+	<input type="button" onclick="peticionAJAX('/white/up')" value="+" />
+	<br/>
+
+	Efectos:
+	<input type="button" onclick="peticionAJAX('/fx/off')" value="0" />
+	<input type="button" onclick="peticionAJAX('/fx/on')" value="1" />
+	<br/>
+
+</body>
+</html>
+

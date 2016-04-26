@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>Hologram</title>
+</head>
+
+<body style="background-color: black">
+	<div style="text-align: center">
+		<img id="holo" src="output.jpg" width="600" height="600">
+	</div>
+
+	<script>
+		window.onload = function() {
+			var image = document.getElementById("holo");
+
+			function updateImage() {
+				image.src = image.src.split("?")[0] + "?" + new Date().getTime();
+			}
+
+			setInterval(updateImage, 200);
+		}
+	</script>
+
+</body>
+</html>
+
